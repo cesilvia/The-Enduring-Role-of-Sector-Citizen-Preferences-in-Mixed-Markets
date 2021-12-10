@@ -14,5 +14,6 @@ What role does sector play in citizens’ perceptions of products or services in
 This repository contains the data and code for:
 > Witesman, Eva M., Curtis Child, and Chris Silvia. (Forthcoming). “The Enduring Role of Sector: Citizen Preferences in Mixed Markets” Journal of Public Administration Research and Theory.
 
-## Replication Procedures
-  
+## Replication
+### Data
+  * Data for
