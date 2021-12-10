@@ -1,5 +1,5 @@
 # The-Enduring-Role-of-Sector-Citizen-Preferences-in-Mixed-Markets
-#### *Eva Witesman*, Romney Institute of Public Service and Ethics, Brigham Young University
+#### _Eva Witesman_, Romney Institute of Public Service and Ethics, Brigham Young University
 #### *Curtis Child*, Department of Socilogy, Brigham Young University
 #### *Chris Silvia*, Romney Institute of Public Service and Ethics,, Brigham Young University
 
