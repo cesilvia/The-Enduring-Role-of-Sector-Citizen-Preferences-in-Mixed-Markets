@@ -15,5 +15,74 @@ This repository contains the data and code for:
 > Witesman, Eva M., Curtis Child, and Chris Silvia. (Forthcoming). “The Enduring Role of Sector: Citizen Preferences in Mixed Markets” Journal of Public Administration Research and Theory.
 
 ## Replication
-### Data
-  * Data for
+For our analysis, we used Sawtooth’s proprietary, built-in Analysis and Simulator tools to conduct initial analyses. Supplemental analyses and graphics were generated using Excel, Stata 16, and R.   
+
+The following R packages should be installed in order to run the following code:
+ ~~~
+ install.packages("dplyr")
+ install.packages("ggplot2")
+ install.packages("tidyr")
+ install.packages("scales")
+ install.packages("readxl")
+ install.packages("RColorBrewer")
+ ~~~
+
+There are five types of analysis conducted in our paper. The following describes the rationale for the analysis, the data used, the procedures followed, and the code used.
+
+1. A total of 529 paid subjects participated. All were part of a nationally representative panel managed by Centiment, a survey panel company. The demographic data reported in Table 3 can be replicated using the following:
+
+>A. **Data:**
+     
+>B. **Procedure and Code:**
+>import delimited "https://raw.githubusercontent.com/CSSEGISandData/COVID-19/master/csse_covid_19_data/csse_covid_19_daily_reports/01-29-2020.csv"
+     
+ 1. The `CBChealth4sector` dataset was loaded into Stata
+ 2. The `Respondent` variable was converted from a string variable to a numeric variable using `destring Respondent, replace` and the data set was saved as `CBChealth4sector.dta`  
+ 3. Steps 1 and 2 were repeated for the `CBCmuseum4sector` dataset and for the `Demographics` dataset
+ 4. With the `Demographics` dataset open, the `Demographics`, `CBChealth4sector` and `CBCmuseum4sector` were merged using:
+  ~~~
+    merge 1:1 Respondent using "~/CBChealth4sector.dta"
+rename _merge _mergeHealth
+  ~~~
+  ~~~
+    merge 1:1 Respondent using "/Users/cs87/Library/CloudStorage/Box-Box/Chris/Work/Research/Works In Progress/Nonprofit Conjoint with Eva and Curtis/JPART/Stata Files/Demographics/JPART3/museumJPART3.dta"
+    rename _merge _mergeMuseum
+  ~~~
+>>5.
+     
+
+
+2. We estimated the part-worth utilities, or the influence of individual attribute levels on the decision. The part-worths are zero-centered for each attribute such that the average part-worth score for each attribute is set to 0. These part-worth scores serve as the basis for the analysis of conjoint analysis results. Table 4 and Figures 1, 2, and 3 can be replicated using the following:
+
+     A. **Data:**
+     
+     B. **Procedure and Code:**
+     
+
+        
+    
+
+3. We use the part-worth utilities to estimate attribute importance scores. The attribute importance scores provide information regarding the relative importance of each attribute. Attribute importance scores are estimated by calculating part-worth utilities for each attribute level for each subject. The range in part-worth utilities for each attribute is then determined (the highest part-worth utility at a certain level of the given attribute minus the lowest part-worth utility at a certain level of the given attribute) before computing each attribute’s utility range as a percentage of the combined possible utility, which are then averaged across the dataset (Orme 2014). The resulting percentage is an attribute’s importance. Attribute importance scores, therefore, can be interpreted as the average percent of the total variation in utility attributable to the particular attribute. Table 5 can be replicated using the following:   
+
+     A. **Data:**
+     
+     B. **Procedure:**
+     
+     C. **Code:**
+
+4. We use the part-worth utilities to estimate the probability that a subject will make a purchasing decision at specified attribute levels. Because part-worth scores are zero-centered by attribute, part-worth scores for one attribute cannot be compared to the scores of the other attributes because of the difference in scaling. Therefore, we transform part-worth utilities into preference shares using a market simulator (Orme 2014). Market simulator results are easier to interpret because they are on a zero to one hundred scale, and have ratio scale properties (Orme 2014). We presented these results graphically, with each plotted point representing the probability that subjects would purchase the product at the indicated levels of the attributes. Figures 4 and 5 can be replicated using the following:   
+
+     A. **Data:**
+     
+     B. **Procedure:**
+     
+     C. **Code:**
+
+5. We regressed the cost levels on the average utilities for each cost level to calculate the willingness to pay for each attribute level in order to create a linear interpolation of a continuous covariate.
+
+     A. **Data:**
+     
+     B. **Procedure:**
+     
+     C. **Code:**
+
