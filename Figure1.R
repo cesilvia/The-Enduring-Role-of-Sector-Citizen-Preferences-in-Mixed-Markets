@@ -1,0 +1,31 @@
+
+getwd()
+setwd("/Users/cs87/Desktop/GitHub")
+
+require(dplyr)
+require(ggplot2)
+require(tidyr)
+require(scales)
+require(readxl)
+require(RColorBrewer)
+require(forcats)
+
+
+MarketShareOrg <- read_excel("OrgType_Simulator.xlsx")
+
+MarketShareOrg <- MarketShareOrg %>%
+  mutate(orgtype_cat = factor(orgtype, levels = c(1, 2, 3), labels = c("For-Profit", "Nonprofit", "Government"), ordered = TRUE))
+MarketShareOrg$orgtype <- factor(MarketShareOrg$orgtype, levels = c(1, 3, 2), ordered = TRUE)
+
+ggplot(MarketShareOrg,aes(x = orgtype, y = ms, fill=factor(orgtype_cat))) +
+  geom_bar(stat="identity") +
+  #geom_errorbar(aes(ymin=mslb2, ymax=msub2), width=.1, color="black", position = position_dodge(width = 0.5)) +
+  facet_grid(~scenario, scales = "free", space = "free") +
+  scale_fill_brewer(palette = "Set1") +
+  labs(x = "Organizational Type",  
+       y = "Preference Share (%)",  
+       fill = "Organizational Type",
+      caption="Preferences for organizational type as compared to the base level of Unknown Organizational Type")+
+  theme(legend.position = "bottom", axis.text.x=element_blank(), axis.ticks.x =element_blank(), panel.spacing.x = unit(1, "lines")) 
+
+
