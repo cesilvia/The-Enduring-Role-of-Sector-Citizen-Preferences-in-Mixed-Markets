@@ -30,6 +30,7 @@ There are four types of analysis conducted in our paper. The following describes
      4. The data used for *Figure 2* can be found in *Price_Simulator.xlsx*
      5. The data used for *Figure 2* can be found in *Rating_Simulator.xlsx*
      6. The data used to create the *OrgType_Simulator.xlsx*, *Price_Simulator.xlsx*, and *Rating_Simulator.xlsx* was generated using *Preference_Calculator*.
+
 -----
      B. **Procedure and Code for Table 4:**
      1. The mean partworth utility for each level of each attribute was calculated in Excel using the =AVERAGE() command. For example, the mean partworth utility for the nonprofit organizational type is =AVERAGE(B2:B20001) since cells B2 through B20001 contain the partworths for the nonprofit organizayional type for the 20,000 iterations.
@@ -37,6 +38,7 @@ There are four types of analysis conducted in our paper. The following describes
      3. The lower and upper bound of the 95% Credible Interval was calculated using the =NORM.INV command
         1. For the lower bound: =NORM.INV(0.025,mean,standard deviation)
         2. For the upper bound: =NORM.INV(0.975,mean,standard deviation)
+
 -----
      C. **Procedure and Code for Figures 1-3:**
      1. The code for creating *Figure 1* can be found in *Figure1.R*
@@ -47,10 +49,12 @@ There are four types of analysis conducted in our paper. The following describes
 -----    
 -----
 2. We use the part-worth utilities to estimate attribute importance scores. The attribute importance scores provide information regarding the relative importance of each attribute. Attribute importance scores are estimated by calculating part-worth utilities for each attribute level for each subject. The range in part-worth utilities for each attribute is then determined (the highest part-worth utility at a certain level of the given attribute minus the lowest part-worth utility at a certain level of the given attribute) before computing each attribute’s utility range as a percentage of the combined possible utility, which are then averaged across the dataset (Orme 2014). The resulting percentage is an attribute’s importance. Attribute importance scores, therefore, can be interpreted as the average percent of the total variation in utility attributable to the particular attribute. Table 5 can be replicated using the following:   
+
 -----
      A. **Data:**
      1. The data used for the *Health Test Scenario portion* of *Table 5* can be found in *Health4sector_PartWorths.xlsx*
      2. The data used for the *Museum Ticket Scenario portion* of *Table 5* can be found in *Museum4sector_PartWorths.xlsx*   
+
 -----     
      B.  **Procedure and Code:**
      1. The utilities for each attribute in each iteration were determined by calculating the difference between the largest partworth for any level of the attribute in the iteration and the smallest partworth for any level of the attribute in the iteration using the =Max and =Min commands. For example, the utility for organizational type for the first iteration is calculated by =MAX(B2:E2)-MIN(B2:E2) since cells B2 through E2 contain the partworths for the four levels of the organizational type in the first iteration.
@@ -67,11 +71,14 @@ There are four types of analysis conducted in our paper. The following describes
 -----
      A. **Data:**
      1. The data used for *Figure 4* can be found in *Health4sector_PartWorths.xlsx*
-     2. The data used for *Figure 5* can be found in *Museum_Long_Results.xlsx* 
+     2. The data used for *Figure 5* can be found in *Museum_Long_Results.xlsx*
+     3. The data used to create the *Health4sector_PartWorths.xlsx* and the *Museum_Long_Results.xlsx* were generated using the *Sawtooth_Health_Simulator.xlsx* and the *Sawtooth_Museum_Simulator.xlsx*, respectively.     
+ 
  -----    
      B. **Procedure and Code:**
       1. The code for creating *Figure 4* can be found in *Figure4.R*
       2. The code for creating *Figure 5* can be found in *Figure5.R*
+
 -----    
 -----
 4. We regressed the cost levels on the average utilities for each cost level to calculate the willingness to pay for each attribute level in order to create a linear interpolation of a continuous covariate.
