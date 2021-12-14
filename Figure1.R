@@ -1,6 +1,6 @@
 
 getwd()
-setwd("/Users/cs87/Desktop/GitHub")
+setwd()
 
 require(dplyr)
 require(ggplot2)
