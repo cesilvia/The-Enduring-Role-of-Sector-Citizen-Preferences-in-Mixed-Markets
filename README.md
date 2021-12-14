@@ -25,7 +25,7 @@ There are four types of analysis conducted in our paper. The following describes
      A. **Data:**
      1. The data used for the Health Test Scenario portion of Table 4 can be found in Health4sector_PartWorths.xlsx
      2. The data used for the Museum Ticket Scenario portion of Table 4 can be found in Museum4sector_PartWorths.xlsx
-     3. The data used for **Figure 1** can be found in **OrgType_Simulator.xlsx**
+     3. The data used for *Figure 1* can be found in **OrgType_Simulator.xlsx**
      4. The data used for **Figure 2** can be found in **Price_Simulator.xlsx**
      5. The data used for **Figure 2** can be found in **Rating_Simulator.xlsx**
      6. The data used to create the **OrgType_Simulator.xlsx**, **Price_Simulator.xlsx**, and **Rating_Simulator.xlsx** was generated using **Preference_Calculator**.
