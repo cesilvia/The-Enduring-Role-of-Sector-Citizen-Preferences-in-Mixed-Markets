@@ -86,10 +86,11 @@ There are four types of analysis conducted in our paper. The following describes
 
 
      A. *Data:*
+     1. The data used to calculate the marginal willingess to pay (MWTP) for the Health Test Scenario can be found on the summary tab of *CBChealth4sector-HB.xlsx*
+     2. The data used to calculate the marginal willingess to pay (MWTP) for the Museum Ticket Scenario can be found on the summary tab of *CBCmuseum4sector-HB.xlsx*  
      
      
-     B. *Procedure:*
-     
-     
-     C. *Code:*
+     B. *Procedure and Code:*
+     1. The average ultility was regressed on the cost attribute levels using =LINEST to get the slope coefficient. For example, the formula =@LINEST(B12:B17,A12:A17) was used in Cell B35 of the *CBChealth4sector-HB.xlsx* to calculate thge slope coefficient for the Health Test Scenario
+     2. The MWTP was calculated by dividing the difference of the average utlity for the base level minus the average utility for the level of interest by the slope coefficient. For example, the formula to calculate the MTWP for Nonprofitness in the Health Test Scenario is =(B11-B8)/B35, where cell B11 contains the average ultility for an organization from an unknown sector (the base level), B8 is the average utility for a nonprofit organization, and B35 is the slope coefficient calculated in Step 1. 
 -----
