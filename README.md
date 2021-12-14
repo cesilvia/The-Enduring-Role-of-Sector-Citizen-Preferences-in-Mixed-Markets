@@ -19,6 +19,7 @@ This repository contains the data and code for:
 For our analysis, we used Sawtooth’s proprietary, built-in Analysis and Simulator tools to conduct initial analyses. Supplemental analyses and graphics were generated using Excel, Stata 16, and R. Sawtooth provides all data in Microsoft Excel files.  
 
 There are four types of analysis conducted in our paper. The following describes the rationale for the analysis, the data used, the procedures followed, and the code used.
+
 -----
 1. We estimated the part-worth utilities, or the influence of individual attribute levels on the decision. The part-worths are zero-centered for each attribute such that the average part-worth score for each attribute is set to 0. These part-worth scores serve as the basis for the analysis of conjoint analysis results. **Table 4** and **Figures 1, 2, and 3** can be replicated using the following:
 -----
