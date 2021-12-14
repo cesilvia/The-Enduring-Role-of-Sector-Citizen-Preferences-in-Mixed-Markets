@@ -19,7 +19,6 @@ MarketShareOrg$orgtype <- factor(MarketShareOrg$orgtype, levels = c(1, 3, 2), or
 
 ggplot(MarketShareOrg,aes(x = orgtype, y = ms, fill=factor(orgtype_cat))) +
   geom_bar(stat="identity") +
-  #geom_errorbar(aes(ymin=mslb2, ymax=msub2), width=.1, color="black", position = position_dodge(width = 0.5)) +
   facet_grid(~scenario, scales = "free", space = "free") +
   scale_fill_brewer(palette = "Set1") +
   labs(x = "Organizational Type",  
