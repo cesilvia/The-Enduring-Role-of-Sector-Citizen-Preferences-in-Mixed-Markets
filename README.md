@@ -16,7 +16,7 @@ This repository contains the data and code for:
 -----
 -----
 ## Replication
-For our analysis, we used Sawtooth’s proprietary, built-in Analysis and Simulator tools to conduct initial analyses. Supplemental analyses and graphics were generated using Excel, Stata 16, and R. Sawtooth provides all data in Microsoft Excel files.  
+For our analysis, we used Sawtooth’s proprietary, built-in Analysis and Simulator tools to conduct initial analyses. Supplemental analyses and graphics were generated using Excel and R. Sawtooth provides all data in Microsoft Excel files.  
 
 There are four types of analysis conducted in our paper. The following describes the rationale for the analysis, the data used, the procedures followed, and the code used.
 
@@ -29,8 +29,8 @@ There are four types of analysis conducted in our paper. The following describes
      2. The data used for the Museum Ticket Scenario portion of *Table 4* can be found in *Museum4sector_PartWorths.xlsx*
      3. The data used for *Figure 1* can be found in *OrgType_Simulator.xlsx*
      4. The data used for *Figure 2* can be found in *Price_Simulator.xlsx*
-     5. The data used for *Figure 3* can be found in *Rating_Simulator.xlsx*
-     6. The data used to create the *OrgType_Simulator.xlsx*, *Price_Simulator.xlsx*, and *Rating_Simulator.xlsx* was generated using *Preference_Calculator*.
+     5. The data used for *Figure 3* can be found in *Review_Simulator.xlsx*
+     6. The data used to create the *OrgType_Simulator.xlsx*, *Price_Simulator.xlsx*, and *Review_Simulator.xlsx* was generated using *Preference_Calculator*.
 
 
      B. *Procedure and Code for Table 4:*
@@ -48,7 +48,7 @@ There are four types of analysis conducted in our paper. The following describes
 ----
         
 ----
-2. We use the part-worth utilities to estimate attribute importance scores. The attribute importance scores provide information regarding the relative importance of each attribute. Attribute importance scores are estimated by calculating part-worth utilities for each attribute level for each subject. The range in part-worth utilities for each attribute is then determined (the highest part-worth utility at a certain level of the given attribute minus the lowest part-worth utility at a certain level of the given attribute) before computing each attribute’s utility range as a percentage of the combined possible utility, which are then averaged across the dataset (Orme 2014). The resulting percentage is an attribute’s importance. Attribute importance scores, therefore, can be interpreted as the average percent of the total variation in utility attributable to the particular attribute. Table 5 can be replicated using the following:   
+2. We use the part-worth utilities to estimate attribute importance scores. The attribute importance scores provide information regarding the relative importance of each attribute. Attribute importance scores are estimated by calculating part-worth utilities for each attribute level for each subject. The range in part-worth utilities for each attribute is then determined (the highest part-worth utility at a certain level of the given attribute minus the lowest part-worth utility at a certain level of the given attribute) before computing each attribute’s utility range as a percentage of the combined possible utility, which are then averaged across the dataset (Orme 2014). The resulting percentage is an attribute’s importance. Attribute importance scores, therefore, can be interpreted as the average percent of the total variation in utility attributable to the particular attribute. *Table 5* can be replicated using the following:   
 
 
      A. *Data:*
@@ -73,7 +73,7 @@ There are four types of analysis conducted in our paper. The following describes
      A.*Data:*
      1. The data used for *Figure 4* can be found in *Health_Long_Results*
      2. The data used for *Figure 5* can be found in *Museum_Long_Results.xlsx*
-     3. The data used to create the *Health4sector_PartWorths.xlsx* and the *Museum_Long_Results.xlsx* were generated using the *Sawtooth_Health_Simulator.xlsx* and the *Sawtooth_Museum_Simulator.xlsx*, respectively.     
+     3. The data used to create the *Health_Long_Results* and the *Museum_Long_Results.xlsx* were generated using the *Sawtooth_Health_Simulator.xlsx* and the *Sawtooth_Museum_Simulator.xlsx*, respectively.     
  
   
      B. *Procedure and Code:*
