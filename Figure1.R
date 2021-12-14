@@ -24,6 +24,7 @@ ggplot(MarketShareOrg,aes(x = orgtype, y = ms, fill=factor(orgtype_cat))) +
   labs(x = "Organizational Type",  
        y = "Preference Share (%)",  
        fill = "Organizational Type",
+       title = "Figure 1: Simulated impact of organizational type on preference share", 
       caption="Preferences for organizational type as compared to the base level of Unknown Organizational Type")+
   theme(legend.position = "bottom", axis.text.x=element_blank(), axis.ticks.x =element_blank(), panel.spacing.x = unit(1, "lines")) 
 

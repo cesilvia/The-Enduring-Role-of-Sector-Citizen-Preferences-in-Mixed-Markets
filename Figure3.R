@@ -1,6 +1,6 @@
 
 getwd()
-setwd("/Users/cs87/Desktop")
+setwd()
 
 require(ggplot2)
 require(tidyr)
@@ -8,7 +8,7 @@ require(scales)
 require(readxl)
 require(RColorBrewer)
 
-MarketShareReview <- read_excel("Review Simulator JPART3.xlsx")
+MarketShareReview <- read_excel("Review_Simulator.xlsx")
 
 
 MarketShareReview <- MarketShareReview %>%
@@ -23,6 +23,7 @@ ggplot(MarketShareReview,aes(x = review, y = ms, fill=factor(review_cat))) +
   labs(x = "Cost",  
        y = "Preference Share (%)",  
        fill = "Customer Review Rating",
+       title = "Figure 3: Simulated impact of customer review ratings on preference share",
        caption="Preferences for customer review ratings as compared to the base level of an unknown rating")+
   theme(legend.position = "bottom", axis.text.x=element_blank(), axis.ticks.x =element_blank(), panel.spacing.x = unit(1, "lines")) 
 

@@ -23,6 +23,7 @@ ggplot(MarketSharePrice,aes(x = cost, y = ms, fill=factor(cost_cat))) +
   labs(x = "Cost",  
        y = "Preference Share (%)",  
        fill = "Cost",
+       title = "Figure 2: Simulated impact of price on preference share",
        caption="Preferences for price as compared to the base level of $15")+
   theme(legend.position = "bottom", axis.text.x=element_blank(), axis.ticks.x =element_blank(), panel.spacing.x = unit(1, "lines")) 
 

@@ -1,6 +1,6 @@
 
 getwd()
-setwd("/Users/cs87/Desktop")
+setwd()
 
 require(dplyr)
 require(ggplot2)
@@ -24,6 +24,7 @@ D <- ggplot(museum, aes(y = probability, x = `cost ($)`,
   scale_color_manual(values=c('coral1', "purple4", "green3", "cornflowerblue"))+
   scale_x_continuous(breaks = 10:15) +
   labs(color = "Sector", shape = "Sector", x = "Cost", y = "Probability", 
+       title = "Figure 5: Probability of purchasing museum admissions tickets by customer rating, cost, certification, and sector",
        caption="Each bar is constructed using a 95% confidence interval of the mean") +
   facet_wrap(vars(rating)) +
   theme_bw() +
